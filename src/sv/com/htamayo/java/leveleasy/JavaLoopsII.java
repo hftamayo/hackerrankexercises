@@ -13,8 +13,12 @@ public class JavaLoopsII {
             int a = in.nextInt();
             int b = in.nextInt();
             int n = in.nextInt();
-            for(int j=0; j<=n-1; j++){
-                result = result + (int)(a + Math.pow(2, j) * b);
+            int j = 0;
+            result = result + (int)(a + Math.pow(2, j) * b);
+            System.out.print( result + " ");
+            for(j=1; j<=n-1; j++){
+                result = result + (int)(Math.pow(2, j) * b);
+                //System.out.println("operaciones: " + "a->"+a+"-"+Math.pow(2,j) + "-"+Math.pow(2, j) * b);
                 System.out.print( result + " ");
             }
             System.out.println();
