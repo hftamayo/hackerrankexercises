@@ -4,7 +4,7 @@ package sv.com.htamayo.java.cadenas;
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class Ejercicio01{
 
     public static void main(String[] args) {
 
@@ -15,8 +15,13 @@ public class Solution {
         String firstB = B.substring(0, 1);
 
         /* Enter your code here. Print output to STDOUT. */
-        System.out.println(A.len + B.length);
-        System.out.println(firstA+A.substring(1) + " " + firstB+B.substring(1));
-
+        System.out.println(A.length() + B.length());
+        if(A.compareTo(B) > 0){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+        System.out.println(firstA.toUpperCase()+A.substring(1) + " " + firstB.toUpperCase()+B.substring(1));
     }
 }
