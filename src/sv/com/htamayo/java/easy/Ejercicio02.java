@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 import java.math.BigInteger;
 
-public class Ejercicio2 {
+public class Ejercicio02 {
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */

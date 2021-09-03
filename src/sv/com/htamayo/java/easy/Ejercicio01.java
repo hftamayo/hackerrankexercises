@@ -15,7 +15,7 @@ import java.math.BigInteger;
 
 
 
-public class Ejercicio1 {
+public class Ejercicio01 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
