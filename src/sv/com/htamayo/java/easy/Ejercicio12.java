@@ -12,6 +12,7 @@ class Ejercicio12{
         List<String> lstAlias = new ArrayList<>();
         int n=in.nextInt();
         in.nextLine();
+        int notFound = 0;
         for(int i=0;i<n;i++)
         {
             String name=in.nextLine();
