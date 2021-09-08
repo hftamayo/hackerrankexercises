@@ -4,7 +4,11 @@ package sv.com.htamayo.java.easy;
 import java.util.*;
 import java.io.*;
 
-class Ejercicio12{
+class E27Map {
+    /*
+    Esta es mi solucion es bien parecida
+    unicamente que los resultados (output) no se muestran en el orden solicitado
+
     public static void main(String []argh)
     {
         Scanner in = new Scanner(System.in);
@@ -41,5 +45,34 @@ class Ejercicio12{
             notFound = 0;
         }
     }
-}
+    */
 
+    //esta es una solucion que encontre
+public static void main(String []argh) {
+    Scanner scan = new Scanner(System.in);
+    int contacts = scan.nextInt();
+    scan.nextLine();
+    Map<String, Integer> map = new HashMap<>(contacts);
+    for(int i=0; i < contacts; i++)
+    {
+        String name = scan.nextLine().trim();
+        int phone = scan.nextInt();
+        scan.nextLine();
+        map.put(name, phone);
+    }
+
+while(scan.hasNext())
+    {
+        String query = scan.nextLine().trim();
+        if(map.containsKey(query))
+        {
+            System.out.println(query + "=" + map.get(query));
+        }
+        else
+        {
+            System.out.println("Not found");
+        }
+    }
+    scan.close();
+}
+}
