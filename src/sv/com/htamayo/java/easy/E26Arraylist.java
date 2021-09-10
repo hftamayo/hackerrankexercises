@@ -6,7 +6,8 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Ejercicio14 {
+public class E26Arraylist {
+    /* este era mi enfoque
     public static void main(String[] args){
         List<Integer> lstValues = new ArrayList<>();
         Map<Integer, List<Integer> > dataMap = new HashMap<>();
@@ -55,10 +56,47 @@ public class Ejercicio14 {
         }
 
          */
-
+/*
         System.out.println("coords needed");
         for(Map.Entry<Integer, Integer> coords: coordsMap.entrySet()){
             System.out.println("key="+coords.getKey()+ ", value="+coords.getValue());
         }
     }
+
+ */
+
+    public class Solution {
+        //este es una de las soluciones disponibles
+
+        public static void main(String[] args) {
+            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+            ArrayList<ArrayList<Integer>> dataList = new ArrayList<ArrayList<Integer>>();
+            Scanner rawData = new Scanner(System.in);
+
+            int N = rawData.nextInt();
+            for(int n = 0; n<N; ++n){
+                int D = rawData.nextInt();
+                ArrayList<Integer> a = new ArrayList<Integer>();
+                for(int d=0; d<D; ++d){
+                    a.add(rawData.nextInt());
+                }
+
+                dataList.add(a);
+            }
+
+            int Q = rawData.nextInt();
+            for(int q=0; q<Q; ++q){
+                int x = rawData.nextInt();
+                int y = rawData.nextInt();
+
+                try{
+                    System.out.println(dataList.get(x-1).get(y-1));
+                }catch(Exception e){
+                    System.out.println("ERROR!");
+                }
+            }
+        }
+    }
+
+
 }
