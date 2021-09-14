@@ -1,5 +1,6 @@
 package sv.com.htamayo.java.challenge30daysept;
 
+<<<<<<< HEAD
 
 import java.io.*;
 import java.util.*;
@@ -37,4 +38,7 @@ public class Day06 {
         rawData.close();
     }
 
+=======
+public class Day06 {
+>>>>>>> 3c1fdf9a49978b6bdbb644fef55a255b9bf130a8
 }

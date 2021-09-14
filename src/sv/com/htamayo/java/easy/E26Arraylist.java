@@ -32,7 +32,7 @@ public class E26Arraylist {
             }
             dataMap.put(i, lstValues);
             //lstValues.clear();
-        }//fin del for
+        }//fin del for loop
 
         System.out.println("How many coords line:");
         lineQuantity = rawData.nextInt();
