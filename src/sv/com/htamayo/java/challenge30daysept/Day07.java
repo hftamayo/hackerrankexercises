@@ -1,9 +1,11 @@
 package sv.com.htamayo.java.challenge30daysept;
 
+import java.util.Scanner;
+
 public class Day07 {
     static Scanner rawData;
     static int N = 0;
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
 
         rawData = new Scanner(System.in);
         N = rawData.nextInt();

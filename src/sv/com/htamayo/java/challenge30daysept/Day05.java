@@ -1,10 +1,12 @@
 package sv.com.htamayo.java.challenge30daysept;
 
-public class Day05 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+import java.util.Scanner;
 
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
+public class Day05 {
+    public static void main(String[] args)  {
+        Scanner bufferedReader = new Scanner(System.in);
+
+        int n = bufferedReader.nextInt();
 
         bufferedReader.close();
 
