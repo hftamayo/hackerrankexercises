@@ -4,7 +4,7 @@ score obtained: 9.20 of 10.0
 test cases remaining: 10, 23
  */
 
-package sv.com.htamayo.java.datastructures;
+package sv.com.htamayo.java.datastructures.easy;
 
 import java.io.*;
 
