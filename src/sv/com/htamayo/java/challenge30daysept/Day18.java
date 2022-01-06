@@ -6,23 +6,23 @@ public class Day18 {
         Stack<char> myStack;
         Queue<Integer> myQueue;
 
-        public Solution(){
+        public Solution() {
             myStack = new Stack<char>();
             myQueue = new LinkedList<>();
         }
 
-        void pushCharacter(char ch){
+        void pushCharacter(char ch) {
             char stackChar = ch;
             myStack.push(stackChar);
         }
 
-        char popCharacter(){
+        char popCharacter() {
             return (char) myStack.pop();
         }
 
-        void enqueueCharacter(char ch){
+        void enqueueCharacter(char ch) {
             char queueChar = ch;
             q.add(ch);
         }
-
     }
+}
