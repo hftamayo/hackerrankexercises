@@ -1,0 +1,50 @@
+package sv.com.htamayo.java.challenge30daysept;
+
+import java.util.*;
+
+public class Day21Generics {
+
+    class Printer <T> {
+
+        /**
+         *    Method Name: printArray
+         *    Print each element of the generic array on a new line. Do not return anything.
+         *    @param A generic array
+         **/
+
+        // Write your code here
+        public <T> void printArray(T[] inputArray){
+            for(T element : inputArray){
+                System.out.printf("%s ", element);
+                System.out.println();
+            }
+        }
+
+    }
+
+    public class Generics {
+
+        public static void main(String args[]){
+            Scanner scanner = new Scanner(System.in);
+            int n = scanner.nextInt();
+            Integer[] intArray = new Integer[n];
+            for (int i = 0; i < n; i++) {
+                intArray[i] = scanner.nextInt();
+            }
+
+            n = scanner.nextInt();
+            String[] stringArray = new String[n];
+            for (int i = 0; i < n; i++) {
+                stringArray[i] = scanner.next();
+            }
+
+            Printer<Integer> intPrinter = new Printer<Integer>();
+            Printer<String> stringPrinter = new Printer<String>();
+            intPrinter.printArray( intArray  );
+            stringPrinter.printArray( stringArray );
+            if(Printer.class.getDeclaredMethods().length > 1){
+                System.out.println("The Printer class should only have 1 method named printArray.");
+            }
+        }
+    }
+}
