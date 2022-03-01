@@ -15,13 +15,17 @@ class Node{
 public class Day24RemoveDups {
     public static Node removeDuplicates(Node head) {
         //Write your code here
-        // Hash to store seen values
+        
+        
+                // Hash to store seen values
         HashSet<Integer> hs = new HashSet<>();
 
         /* Pick elements one by one */
         Node current = head;
         Node prev = null;
-        Node result = null;
+        List<T> resultado = new ArrayList<Integer>();
+        Node intermediate = null;
+        Node finalResult = null;
         while (current != null) {
             int curval = current.data;
 
@@ -39,10 +43,14 @@ public class Day24RemoveDups {
         //iterating the HashSet tu fulfill Node result
         Iterator<Integer> it = hs.iterator();
         while (it.hasNext()) {
-            result.data = it.next();
+            resultado.add(it.next());
         }
-
-        return result;
+        
+        for(T t: resultado){
+            finalResult.add(t);
+            }
+        
+        return finalResult;      
     }
 
     public static  Node insert(Node head,int data)
