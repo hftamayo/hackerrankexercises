@@ -14,44 +14,47 @@ class Node{
 
 public class Day24RemoveDups {
     public static Node removeDuplicates(Node head) {
-        //Write your code here
-        
-        
-                // Hash to store seen values
-        HashSet<Integer> hs = new HashSet<>();
+      //Write your code here
+      /* Esta solucion ejecutaba y devolvia los valores aceptados, sin embargo, no obtenía el puntaje deseado
+        HashSet<Integer> hs = new HashSet<Integer>();
 
-        /* Pick elements one by one */
+        // Pick elements one by one
         Node current = head;
-        Node prev = null;
-        List<T> resultado = new ArrayList<Integer>();
-        Node intermediate = null;
-        Node finalResult = null;
-        while (current != null) {
-            int curval = current.data;
 
+        while (current.next != null) {
             // If current value is seen before
-            if (hs.contains(curval)) {
-                prev.next = current.next;
+            if (hs.contains(current.next.data)) {
+                current.next = current.next.next;
             }
             else {
-                hs.add(curval);
-                prev = current;
+                hs.add(current.next.data);
+                current = current.next;
             }
-            current = current.next;
         }
+        return head;        
+        */
+        
+        /*
+        en cambio la siguiente la daba por buena, la diferencia es el uso de Set en lugar de HashSet
+        */
+     //Write your code here
+         Set<Integer> set = new HashSet<Integer>();
+        if (head == null) return head;
+        set.add(head.data);
+        Node curr = head;
+        while (curr.next != null) {
+            
+            if (set.contains(curr.next.data)) {
+                curr.next = curr.next.next;
+            } else {
+                set.add(curr.next.data);
+                curr = curr.next;
+            }            
+        }
+        return head;        
+        
 
-        //iterating the HashSet tu fulfill Node result
-        Iterator<Integer> it = hs.iterator();
-        while (it.hasNext()) {
-            resultado.add(it.next());
-        }
-        
-        for(T t: resultado){
-            finalResult.add(t);
-            }
-        
-        return finalResult;      
-    }
+     }
 
     public static  Node insert(Node head,int data)
     {
